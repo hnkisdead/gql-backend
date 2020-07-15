@@ -26,9 +26,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = "d$s=*m$-z1dqwkvf4jsmn)+uaj($=w6osf2xym0fmusc0biwuj"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# Отрубаем дебаг потому что обёртка graphene_django.debug.sql.tracking.NormalCursorWrapper
+# для дебага запросов падает с ошибкой 'ascii' codec can't encode character в функции _quote_expr
+# TODO: завеести issue, поправить баг, отправить PR
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition

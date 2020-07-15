@@ -14,7 +14,7 @@ class Tablet(DjangoObjectType):
 
 
 class TabletQuery(object):
-    workstations = graphene.List(Tablet)
+    tablet = graphene.List(Tablet)
 
-    def resolve_workstations(self, info, **kwargs):
+    def resolve_tablet(self, info, **kwargs):
         return TabletModel.objects.all()
