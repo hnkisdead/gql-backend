@@ -4,46 +4,44 @@
 
 ## GraphQL
 Основы GraphQL
-https://www.apollographql.com/blog/the-basics-of-graphql-in-5-links-9e1dc4cac055/
-https://www.apollographql.com/blog/graphql-explained-5844742f195e/
-https://www.youtube.com/watch?v=F4vHSHzpO1g
+[ссылка](https://www.apollographql.com/blog/the-basics-of-graphql-in-5-links-9e1dc4cac055/)
+[ссылка](https://www.apollographql.com/blog/graphql-explained-5844742f195e/)
+[ссылка](https://www.youtube.com/watch?v=F4vHSHzpO1g)
 
 Анатомия запроса GraphQL
-https://www.apollographql.com/blog/the-anatomy-of-a-graphql-query-6dffa9e9e747/
+[ссылка](https://www.apollographql.com/blog/the-anatomy-of-a-graphql-query-6dffa9e9e747/)
 
 Graphene и Graphene Django
-https://docs.graphene-python.org/en/latest/types/schema/
-https://docs.graphene-python.org/projelcts/django/en/latest/installation/
+[ссылка](https://docs.graphene-python.org/en/latest/types/schema/)
+[ссылка](https://docs.graphene-python.org/projelcts/django/en/latest/installation/)
 
 Работа с ошибками
-https://www.apollographql.com/blog/full-stack-error-handling-with-graphql-apollo-5c12da407210/
+[ссылка](https://www.apollographql.com/blog/full-stack-error-handling-with-graphql-apollo-5c12da407210/)
 
 Правила написания схем
-https://github.com/nodkz/graphql-rules-ru/tree/master/docs
+[ссылка](https://github.com/nodkz/graphql-rules-ru/tree/master/docs)
 
 ## Авторизация
 Много про авторизацию есть в этом видео
-https://www.youtube.com/watch?v=NnnvOPdstzg&t=1892s
+[ссылка](https://www.youtube.com/watch?v=NnnvOPdstzg&t=1892s)
 
-## Фильтрация и пагинация
+## Фильтрация, сортировки и пагинация
 В общем про пагинацию
-https://www.apollographql.com/blog/understanding-pagination-rest-graphql-and-relay-b10f835549e7/
+[ссылка](https://www.apollographql.com/blog/understanding-pagination-rest-graphql-and-relay-b10f835549e7/)
+[Ссылка](https://github.com/nodkz/graphql-rules-ru/blob/master/docs/05-list/5.4-pagination.md)
 
 Про архитектуру Relay 
-https://www.apollographql.com/blog/explaining-graphql-connections-c48b7c3d6976/
-
-Устроство фильтрации в neo4j-graphql
-https://grandstack.io/docs/graphql-filtering/
+[ссылка](https://www.apollographql.com/blog/explaining-graphql-connections-c48b7c3d6976/)
 
 Как описывать схему для фильтров и сортировок
-https://www.youtube.com/watch?v=dDxUu-K2qdE
+[ссылка](https://www.youtube.com/watch?v=dDxUu-K2qdE)
 
 ## Производительность 
 Для сокращения запросов есть история с даталоадерами, подробнее в видео
-https://www.youtube.com/watch?v=NnnvOPdstzg&t=1892s
+[ссылка](https://www.youtube.com/watch?v=NnnvOPdstzg&t=1892s)
 
 Оптимизация запросов на сервере
-https://blog.logrocket.com/designing-graphql-server-optimal-performance/
+[ссылка](https://blog.logrocket.com/designing-graphql-server-optimal-performance/)
 
 ## Фикстуры
 Сделано
@@ -61,7 +59,10 @@ https://blog.logrocket.com/designing-graphql-server-optimal-performance/
 В процессе
 
 ## Генерация типов для фронтенда
-В процессе
+Как генерировать правильно типы для фронтенда для разных релизов, новых веток, etc?
 
 ## CI/CD
-В процессе
+[ссылка](https://www.apollographql.com/blog/track-schema-changes-with-apollo-schema-reporting/)
+
+## Метрики
+Что делать с newrelic, sentry, etc?
