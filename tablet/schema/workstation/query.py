@@ -16,5 +16,6 @@ class Workstation(DjangoObjectType):
 class WorkstationQuery(object):
     workstations = graphene.List(Workstation)
 
-    def resolve_workstations(self, info, **kwargs):
+    @staticmethod
+    def resolve_workstations(parent, info, **kwargs):
         return WorkstationModel.objects.all()

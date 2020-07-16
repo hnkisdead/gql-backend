@@ -21,17 +21,22 @@ Graphene и Graphene Django
 Правила написания схем
 [ссылка](https://github.com/nodkz/graphql-rules-ru/tree/master/docs)
 
+Про архитектуру Relay 
+[ссылка](https://www.apollographql.com/blog/explaining-graphql-connections-c48b7c3d6976/)
+
 ## Авторизация
 Много про авторизацию есть в этом видео
 [ссылка](https://www.youtube.com/watch?v=NnnvOPdstzg&t=1892s)
 
-## Фильтрация, сортировки и пагинация
-В общем про пагинацию
+## Пагинация
+Сделано
+
+Способы описывать пагинацию
 [ссылка](https://www.apollographql.com/blog/understanding-pagination-rest-graphql-and-relay-b10f835549e7/)
 [Ссылка](https://github.com/nodkz/graphql-rules-ru/blob/master/docs/05-list/5.4-pagination.md)
 
-Про архитектуру Relay 
-[ссылка](https://www.apollographql.com/blog/explaining-graphql-connections-c48b7c3d6976/)
+# Сортировки и фильтрация
+Сделано
 
 Как описывать схему для фильтров и сортировок
 [ссылка](https://www.youtube.com/watch?v=dDxUu-K2qdE)

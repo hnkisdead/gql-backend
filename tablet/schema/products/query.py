@@ -65,12 +65,6 @@ class ProductsPage(ObjectType):
     object_list = graphene.List(Product)
     paginator = graphene.Field(Paginator)
 
-    def resolve_object_lists(self, info):
-        return self.object_list
-
-    def resolve_paginator(self, info):
-        return self.paginator
-
 
 class ProductsQuery(object):
     products = graphene.Field(
@@ -82,7 +76,8 @@ class ProductsQuery(object):
     )
     product = Product(id=graphene.Int(), name=graphene.String(), category=graphene.String())
 
-    def resolve_products(self, info, page, per_page, sorters=None, filters=None):
+    @staticmethod
+    def resolve_products(parent, info, page, per_page, sorters=None, filters=None):
         if not sorters:
             sorters = []
 
@@ -101,7 +96,8 @@ class ProductsQuery(object):
         except EmptyPage:
             return paginator.page(paginator.num_pages)
 
-    def resolve_product(self, info, **kwargs):
+    @staticmethod
+    def resolve_product(parent, info, **kwargs):
         id = kwargs.get("id")
         name = kwargs.get("name")
 
