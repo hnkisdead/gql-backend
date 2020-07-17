@@ -5,7 +5,8 @@ from __future__ import absolute_import, print_function, unicode_literals
 import graphene
 
 from tablet.schema.products.resolve_product import resolve_product
-from tablet.schema.products.resolve_products import Filter, Product, ProductsPage, Sorter, resolve_products
+from tablet.schema.products.resolve_products import Filter, ProductsPage, Sorter, resolve_products
+from tablet.schema.products.types import Product
 
 
 class ProductsQuery(object):
@@ -18,5 +19,9 @@ class ProductsQuery(object):
         resolver=resolve_products,
     )
     product = graphene.Field(
-        Product, id=graphene.Int(), name=graphene.String(), category=graphene.String(), resolver=resolve_product
+        Product,
+        product_id=graphene.Int(name="id"),
+        name=graphene.String(),
+        category=graphene.String(),
+        resolver=resolve_product,
     )

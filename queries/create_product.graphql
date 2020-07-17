@@ -1,0 +1,11 @@
+mutation {
+  products {
+    create(name: "4 Сыра", category: "Пицца") {
+      product {
+        id
+        name
+        category
+      }
+    }
+  }
+}

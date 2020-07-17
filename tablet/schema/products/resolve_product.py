@@ -5,14 +5,11 @@ from __future__ import absolute_import, unicode_literals
 from tablet.models import Product as ProductModel
 
 
-def resolve_product(_parent, _info, **kwargs):
-    id = kwargs.get("id")
-    name = kwargs.get("name")
-
-    if id:
-        return ProductModel.objects.get(id=id)
+def resolve_product(_parent, _info, product_id=None, name=None):
+    if product_id:
+        return ProductModel.objects.filter(id=product_id).first()
 
     if name:
-        return ProductModel.objects.get(name=name)
+        return ProductModel.objects.filter(name=name).first()
 
     return None

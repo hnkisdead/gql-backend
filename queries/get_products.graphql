@@ -1,0 +1,29 @@
+{
+  products(
+    sorters: [{
+    	field: NAME
+    	order: ASC
+  	}],
+    filters: {
+    	name: {contains: "и"}
+  	},
+    page: 5,
+    perPage: 10
+  ) {
+    objectList {
+    	id
+      name
+      workstations {
+        name
+        tablets {
+          id
+        }
+      }
+    }
+    paginator {
+      numPages
+      perPage
+      count
+    }
+  }
+}

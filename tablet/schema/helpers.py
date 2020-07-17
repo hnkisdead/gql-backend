@@ -16,3 +16,7 @@ def filters_into_filter_args(filters):
         if "name" in filter_item and "exact" in filter_item["name"]:
             return Q(name__exact=filter_item["name"]["exact"])
     return Q()
+
+
+def empty_resolver(_parent, _info):
+    return {}

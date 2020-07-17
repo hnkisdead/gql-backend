@@ -7,10 +7,10 @@ from typing import Any
 import graphene
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator as DjangoPaginator
 from graphene import ObjectType
-from graphene_django import DjangoObjectType
 
 from tablet.models import Product as ProductModel
 from tablet.schema.helpers import filters_into_filter_args, sorters_into_order_by_args
+from tablet.schema.products.types import Product
 from tablet.schema.types import IntegerFilter, Paginator, SortOrder, StringFilter
 
 
@@ -33,11 +33,6 @@ class Filter(graphene.InputObjectType):
     OR = graphene.List(lambda: Filter)
     AND = graphene.List(lambda: Filter)
     NOT = graphene.Field(lambda: Filter)
-
-
-class Product(DjangoObjectType):
-    class Meta:
-        model = ProductModel
 
 
 class ProductsPage(ObjectType):
