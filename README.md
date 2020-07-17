@@ -1,7 +1,5 @@
 # Демо graphql в django
 
-# TODO
-
 ## GraphQL
 Основы GraphQL
 [ссылка](https://www.apollographql.com/blog/the-basics-of-graphql-in-5-links-9e1dc4cac055/)
@@ -33,7 +31,7 @@ Graphene и Graphene Django
 
 Способы описывать пагинацию
 [ссылка](https://www.apollographql.com/blog/understanding-pagination-rest-graphql-and-relay-b10f835549e7/)
-[Ссылка](https://github.com/nodkz/graphql-rules-ru/blob/master/docs/05-list/5.4-pagination.md)
+[ссылка](https://github.com/nodkz/graphql-rules-ru/blob/master/docs/05-list/5.4-pagination.md)
 
 # Сортировки и фильтрация
 Сделано
@@ -42,11 +40,13 @@ Graphene и Graphene Django
 [ссылка](https://www.youtube.com/watch?v=dDxUu-K2qdE)
 
 ## Производительность 
-Для сокращения запросов есть история с даталоадерами, подробнее в видео
+Для сокращения запросов есть история с даталоадерами
 [ссылка](https://www.youtube.com/watch?v=NnnvOPdstzg&t=1892s)
-
-Оптимизация запросов на сервере
+[ссылка](https://apirobot.me/posts/django-graphql-solving-n-1-problem-using-dataloaders)
 [ссылка](https://blog.logrocket.com/designing-graphql-server-optimal-performance/)
+
+Для защиты от сложных запросов есть несколько разных подходов
+[ссылка](https://www.apollographql.com/blog/securing-your-graphql-api-from-malicious-queries-16130a324a6b/)
 
 ## Фикстуры
 Сделано
@@ -71,3 +71,8 @@ Graphene и Graphene Django
 
 ## Метрики
 Что делать с newrelic, sentry, etc?
+
+## Обработка ошибок
+Как лучше возвращать ошибки?
+
+[ссылка](https://www.apollographql.com/blog/full-stack-error-handling-with-graphql-apollo-5c12da407210/)

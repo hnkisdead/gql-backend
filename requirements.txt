@@ -2,6 +2,7 @@
 
 django>=1.11.23,<2.0
 graphene-django>=12.2.1
+django-silk
 
 pip-tools
 pre-commit>=1.21.0
