@@ -23,6 +23,8 @@ Graphene и Graphene Django
 [ссылка](https://www.apollographql.com/blog/explaining-graphql-connections-c48b7c3d6976/)
 
 ## Авторизация
+В каждый резолвер и мутацию приходит аргумент info в котором есть context который по сути request из django
+
 Много про авторизацию есть в этом видео
 [ссылка](https://www.youtube.com/watch?v=NnnvOPdstzg&t=1892s)
 
