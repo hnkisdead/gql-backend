@@ -1,0 +1,97 @@
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+type CreateProductMutation {
+  product: Product
+}
+
+input Filter {
+  id: IntegerFilter
+  name: StringFilter
+  category: StringFilter
+  OR: [Filter]
+  AND: [Filter]
+  NOT: Filter
+}
+
+input IntegerFilter {
+  exact: Int
+  gt: Int
+  gte: Int
+  lt: Int
+  lte: Int
+}
+
+type Mutation {
+  products: ProductsMutations
+}
+
+type Paginator {
+  numPages: Int
+  count: Int
+  perPage: Int
+}
+
+type Product {
+  id: Int
+  name: String
+  category: String
+  workstations: [Workstation!]!
+}
+
+type ProductsMutations {
+  create(category: String!, name: String!): CreateProductMutation
+  update(category: String!, name: String!, id: Int!): UpdateProductMutation
+}
+
+type ProductsPage {
+  objectList: [Product]
+  paginator: Paginator
+}
+
+type Query {
+  tablet: [Tablet]
+  workstations: [Workstation]
+  products(page: Int!, perPage: Int!, sorters: [Sorter], filters: [Filter]): ProductsPage
+  product(id: Int, name: String, category: String): Product
+}
+
+enum SortOrder {
+  ASC
+  DESC
+}
+
+enum SortableFields {
+  CATEGORY
+  ID
+  NAME
+}
+
+input Sorter {
+  field: SortableFields
+  order: SortOrder
+}
+
+input StringFilter {
+  exact: String
+  contains: String
+}
+
+type Tablet {
+  id: ID!
+  name: String!
+  workstations: [Workstation!]!
+}
+
+type UpdateProductMutation {
+  product: Product
+}
+
+type Workstation {
+  id: ID!
+  name: String!
+  products: [Product!]!
+  tablets: [Tablet!]!
+}

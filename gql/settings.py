@@ -97,4 +97,4 @@ STATIC_URL = "/static/"
 # Отрубаем дебаг мидлварь потому что обёртка graphene_django.debug.sql.tracking.NormalCursorWrapper
 # для дебага запросов падает с ошибкой UnicodeEncodeError в функции _quote_expr
 # Issue в репозитории https://github.com/graphql-python/graphene-django/issues/960
-GRAPHENE = {"SCHEMA": "tablet.schema.schema", "MIDDLEWARE": []}
+GRAPHENE = {"SCHEMA": "tablet.schema.schema", "MIDDLEWARE": [], "SCHEMA_OUTPUT": "schema.graphql"}

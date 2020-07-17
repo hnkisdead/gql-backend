@@ -5,12 +5,12 @@ from __future__ import absolute_import, unicode_literals
 import graphene
 
 from tablet.schema.products.types import Product
-from tablet.services.product_services.create_product import create_product
+from tablet.services.product_services.update_product import update_product
 
 
-class CreateProductMutation(graphene.Mutation):
+class UpdateProductMutation(graphene.Mutation):
     """
-    # Создаёт продукт с двумя полями
+    # Обновляет поля у продукта с указанным ID
 
     **Поля**
     1. Название
@@ -18,13 +18,14 @@ class CreateProductMutation(graphene.Mutation):
     """
 
     class Arguments(object):
+        product_id = graphene.Int(required=True, name="id", description="ID продукта")
         name = graphene.String(required=True, description="Название продукта")
         category = graphene.String(required=True, description="Категория продукта")
 
     product = graphene.Field(Product)
 
     @staticmethod
-    def mutate(_parent, _info, name, category):
-        product = create_product(Product(name=name, category=category))
+    def mutate(_parent, _info, product_id, name, category):
+        product = update_product(Product(id=product_id, name=name, category=category))
 
-        return CreateProductMutation(product=product)
+        return UpdateProductMutation(product=product)

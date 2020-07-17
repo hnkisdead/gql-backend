@@ -6,11 +6,13 @@ import graphene
 
 from tablet.schema.helpers import empty_resolver
 from tablet.schema.products.create_product import CreateProductMutation
+from tablet.schema.products.update_product import UpdateProductMutation
 
 
-class ProductsMutation(graphene.ObjectType):
+class ProductsMutations(graphene.ObjectType):
     create = CreateProductMutation.Field()
+    update = UpdateProductMutation.Field()
 
 
-class Products(object):
-    products = graphene.Field(ProductsMutation, resolver=empty_resolver)
+class ProductsMutationsNamespace(object):
+    products = graphene.Field(ProductsMutations, resolver=empty_resolver)
