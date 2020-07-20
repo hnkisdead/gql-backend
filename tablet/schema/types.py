@@ -28,3 +28,20 @@ class IntegerFilter(graphene.InputObjectType):
 class SortOrder(graphene.Enum):
     ASC = "asc"
     DESC = "desc"
+
+
+class Status(graphene.Enum):
+    OK = "ok"
+    ERROR = "error"
+
+
+class BaseError(graphene.ObjectType):
+    message = graphene.String()
+
+
+class ProductAlreadyExistsError(BaseError):
+    pass
+
+
+class ProductDoesntExistsError(BaseError):
+    pass

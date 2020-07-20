@@ -1,6 +1,6 @@
 mutation {
   products {
-    create(payload: {name: "Пепперони", category: "Пицца"}) {
+    update(payload: {id: 12123, name: "Кекерони", category: "Пицца"}) {
       record {
         id
         name
@@ -9,7 +9,7 @@ mutation {
       status
       error {
         __typename
-        ... on ProductAlreadyExistsError {
+        ... on ProductDoesntExistsError {
           message
         }
       }

@@ -2,14 +2,18 @@
 # future
 from __future__ import absolute_import, unicode_literals
 
+from typing import TYPE_CHECKING
+
 from tablet.models import Product as ProductModel
-from tablet.schema.products.types import Product
+
+if TYPE_CHECKING:
+    from tablet.schema.products.mutations.create_product import CreateProductPayload
 
 
-def create_product(product):
-    # type: (Product) -> ProductModel
+def create_product(payload):
+    # type: (CreateProductPayload) -> ProductModel
 
-    if ProductModel.objects.filter(name=product.name, category=product.category).exists():
+    if ProductModel.objects.filter(name=payload.name, category=payload.category).exists():
         raise Exception("Продукт с таким название в данной категории уже существует")
 
-    return ProductModel.objects.create(name=product.name, category=product.category)
+    return ProductModel.objects.create(name=payload.name, category=payload.category)

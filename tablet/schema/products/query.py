@@ -4,8 +4,7 @@ from __future__ import absolute_import, print_function, unicode_literals
 
 import graphene
 
-from tablet.schema.products.resolve_product import resolve_product
-from tablet.schema.products.resolve_products import Filter, ProductsPage, Sorter, resolve_products
+from tablet.schema.products.resolvers import Filter, ProductsPage, Sorter, resolve_product, resolve_products
 from tablet.schema.products.types import Product
 
 

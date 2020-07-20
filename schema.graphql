@@ -3,8 +3,18 @@ schema {
   mutation: Mutation
 }
 
-type CreateProductMutation {
-  product: Product
+type CreateProductData {
+  recordID: Int
+  record: Product
+  status: Status
+  error: CreateProductError
+}
+
+union CreateProductError = ProductAlreadyExistsError
+
+input CreateProductPayload {
+  name: String!
+  category: String!
 }
 
 input Filter {
@@ -41,9 +51,17 @@ type Product {
   workstations: [Workstation!]!
 }
 
+type ProductAlreadyExistsError {
+  message: String
+}
+
+type ProductDoesntExistsError {
+  message: String
+}
+
 type ProductsMutations {
-  create(category: String!, name: String!): CreateProductMutation
-  update(category: String!, name: String!, id: Int!): UpdateProductMutation
+  create(payload: CreateProductPayload!): CreateProductData
+  update(payload: UpdateProductPayload!): UpdateProductData
 }
 
 type ProductsPage {
@@ -74,6 +92,11 @@ input Sorter {
   order: SortOrder
 }
 
+enum Status {
+  ERROR
+  OK
+}
+
 input StringFilter {
   exact: String
   contains: String
@@ -85,8 +108,19 @@ type Tablet {
   workstations: [Workstation!]!
 }
 
-type UpdateProductMutation {
-  product: Product
+type UpdateProductData {
+  recordID: Int
+  record: Product
+  status: Status
+  error: UpdateProductError
+}
+
+union UpdateProductError = ProductDoesntExistsError
+
+input UpdateProductPayload {
+  id: Int!
+  name: String!
+  category: String!
 }
 
 type Workstation {
