@@ -1,6 +1,20 @@
 mutation {
   products {
-    update(payload: {id: 12123, name: "Кекерони", category: "Пицца"}) {
+    u1: update(payload: {id: 1, name: "Кекерони", category: "Пицца"}) {
+      record {
+        id
+        name
+      }
+      recordID
+      status
+      error {
+        __typename
+        ... on ProductDoesntExistsError {
+          message
+        }
+      }
+    }
+    u2: update(payload: {id: 12, name: "Кекерони", category: "Пицца"}) {
       record {
         id
         name

@@ -1,6 +1,20 @@
 mutation {
   products {
-    create(payload: {name: "Пепперони", category: "Пицца"}) {
+    c1: create(payload: {name: "Не вкусная", category: "Пицца"}) {
+      record {
+        id
+        name
+      }
+      recordID
+      status
+      error {
+        __typename
+        ... on ProductAlreadyExistsError {
+          message
+        }
+      }
+    }
+    c2:create(payload: {name: "Не вкусная", category: "Пицца"}) {
       record {
         id
         name
