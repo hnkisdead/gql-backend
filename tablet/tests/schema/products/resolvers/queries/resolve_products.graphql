@@ -1,0 +1,8 @@
+query ResolverProducts($page: Int!, $perPage: Int!){
+  products(page: $page, perPage: $perPage) {
+    objectList {
+      id
+      name
+    }
+  }
+}

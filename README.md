@@ -58,7 +58,7 @@ Graphene и Graphene Django [ссылка][5], [ссылка][6]
 Что делать с newrelic, sentry, etc?
 
 ## Обработка ошибок
-Как лучше возвращать ошибки?
+Как лучше возвращать ошибки? [ссылка][21] [ссылка][22] [ссылка][23]
 
 Ошибки в Apollo Server [ссылка][20]
 
@@ -82,3 +82,6 @@ Graphene и Graphene Django [ссылка][5], [ссылка][6]
 [18]: https://www.apollographql.com/blog/securing-your-graphql-api-from-malicious-queries-16130a324a6b/
 [19]: https://www.apollographql.com/blog/track-schema-changes-with-apollo-schema-reporting/
 [20]: https://www.apollographql.com/blog/full-stack-error-handling-with-graphql-apollo-5c12da407210/
+[21]: https://github.com/nodkz/graphql-rules-ru/blob/master/docs/06-mutations/6.6.4-payload-errors.md
+[22]: https://www.facebook.com/MoscowGraphql/videos/206572663566137/
+[23]: https://github.com/nodkz/conf-talks/tree/master/articles/graphql/errors

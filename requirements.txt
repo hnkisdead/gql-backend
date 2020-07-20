@@ -1,9 +1,13 @@
 # coding=utf-8
 
 django>=1.11.23,<2.0
-graphene-django>=12.2.1
+graphene-django>=2.12.1
 django-silk
 
+mock
+pytest
+pytest-django
+pytest-factoryboy
 pip-tools
 pre-commit>=1.21.0
 isort>=4.3.20
