@@ -6,16 +6,32 @@ import graphene
 
 from tablet.schema.helpers import empty_resolver
 
-from .mutations.create_product import CreateProductData, CreateProductPayload, create_product
-from .mutations.update_product import UpdateProductData, UpdateProductPayload, update_product
+from .mutations.create_product import (
+    CREATE_PRODUCT_DESCRIPTION,
+    CreateProductData,
+    CreateProductPayload,
+    create_product,
+)
+from .mutations.update_product import (
+    UPDATE_PRODUCT_DESCRIPTION,
+    UpdateProductData,
+    UpdateProductPayload,
+    update_product,
+)
 
 
 class ProductsMutations(graphene.ObjectType):
     create = graphene.Field(
-        CreateProductData, payload=graphene.Argument(CreateProductPayload, required=True), resolver=create_product
+        CreateProductData,
+        payload=graphene.Argument(CreateProductPayload, required=True),
+        description=CREATE_PRODUCT_DESCRIPTION,
+        resolver=create_product,
     )
     update = graphene.Field(
-        UpdateProductData, payload=graphene.Argument(UpdateProductPayload, required=True), resolver=update_product
+        UpdateProductData,
+        payload=graphene.Argument(UpdateProductPayload, required=True),
+        description=UPDATE_PRODUCT_DESCRIPTION,
+        resolver=update_product,
     )
 
 

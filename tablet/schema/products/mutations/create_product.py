@@ -10,6 +10,13 @@ from tablet.schema.products.types import Product
 from tablet.schema.types import ProductAlreadyExistsError, Status
 from tablet.services import product_services
 
+CREATE_PRODUCT_DESCRIPTION = """
+### Создание продукта
+
+1. Имя 
+2. Категория
+"""
+
 
 class CreateProductError(graphene.Union):
     class Meta:

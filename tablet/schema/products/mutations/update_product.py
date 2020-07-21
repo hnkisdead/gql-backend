@@ -10,6 +10,13 @@ from tablet.schema.products.types import Product
 from tablet.schema.types import ProductDoesntExistsError, Status
 from tablet.services import product_services
 
+UPDATE_PRODUCT_DESCRIPTION = """
+### Обновление данных о продукте
+
+1. Имя
+2. Категория
+"""
+
 
 class UpdateProductError(graphene.Union):
     class Meta:
