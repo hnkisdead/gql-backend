@@ -1,25 +1,27 @@
 # Демо graphql в django
 
 ## Начало работы
+1. Устанавливаем Python 2
+    ```bash
+    # MacOS
+    brew install python@2
+
+    # Ubuntu
+    apt install python2
+    ```
 1. Клонируем репозиторий 
     ```bash
     git clone https://github.com/subv13/gql.git /путь/до/проекта
     ```
-1. Создаём виртуальные окружение c python 2 и python 3
+1. Создаём виртуальные окружение c python 2 
     ```bash
     virtualenv /путь/до/проекта/venv -p python2
-   
-    virtualenv /путь/до/проекта/venv3 -p python3
    ```
 1. Устанавливаем зависимости
     ```bash
     # Python 2
     source venv/bin/activate
     pip install -r requirements.txt 
-    
-    # Python 3 
-    source venv3/bin/activate
-    pip install -r requirements3.txt 
     ```
 1. Устанавливаем хуки гита - запускают линтеры и форматтеры на коммиты.
     ```bash
