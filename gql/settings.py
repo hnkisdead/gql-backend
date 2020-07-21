@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "graphene_django",
+    "corsheaders",
     "silk",
     "tablet",
 ]
@@ -29,6 +30,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -98,3 +100,6 @@ STATIC_URL = "/static/"
 # для дебага запросов падает с ошибкой UnicodeEncodeError в функции _quote_expr
 # Issue в репозитории https://github.com/graphql-python/graphene-django/issues/960
 GRAPHENE = {"SCHEMA": "tablet.schema.schema", "MIDDLEWARE": [], "SCHEMA_OUTPUT": "schema.graphql"}
+
+CORS_ORIGIN_ALLOW_ALL = True
+SILKY_INTERCEPT_PERCENT = 0

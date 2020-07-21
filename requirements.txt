@@ -1,6 +1,7 @@
 # coding=utf-8
 
 django>=1.11.23,<2.0
+django-cors-headers
 graphene-django>=2.12.1
 django-silk
 
