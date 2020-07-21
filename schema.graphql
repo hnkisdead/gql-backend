@@ -67,6 +67,7 @@ type ProductsMutations {
 type ProductsPage {
   objectList: [Product]
   paginator: Paginator
+  pageNumber: Int
 }
 
 type Query {

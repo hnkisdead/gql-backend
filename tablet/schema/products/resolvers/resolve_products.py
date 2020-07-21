@@ -38,6 +38,11 @@ class Filter(graphene.InputObjectType):
 class ProductsPage(ObjectType):
     object_list = graphene.List(Product)
     paginator = graphene.Field(Paginator)
+    page_number = graphene.Int()
+
+    @staticmethod
+    def resolve_page_number(parent, info, **kwargs):
+        return parent.number
 
 
 def resolve_products(_parent, _info, page, per_page, sorters=None, filters=None):
