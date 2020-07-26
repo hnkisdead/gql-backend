@@ -4,13 +4,14 @@ from __future__ import absolute_import, unicode_literals
 
 import graphene
 
+from tablet.schema.me.query import MeQuery
 from tablet.schema.products.mutation import ProductsMutationsNamespace
 from tablet.schema.products.query import ProductsQuery
 from tablet.schema.tablet.query import TabletQuery
 from tablet.schema.workstation.query import WorkstationQuery
 
 
-class Query(ProductsQuery, WorkstationQuery, TabletQuery, graphene.ObjectType):
+class Query(MeQuery, ProductsQuery, WorkstationQuery, TabletQuery, graphene.ObjectType):
     pass
 
 

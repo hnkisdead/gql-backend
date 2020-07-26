@@ -7,9 +7,9 @@ from graphene import ObjectType
 
 
 class Paginator(ObjectType):
-    num_pages = graphene.Int()
-    count = graphene.Int()
-    per_page = graphene.Int()
+    num_pages = graphene.Int(required=True)
+    count = graphene.Int(required=True)
+    per_page = graphene.Int(required=True)
 
 
 class StringFilter(graphene.InputObjectType):

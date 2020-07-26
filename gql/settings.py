@@ -101,5 +101,7 @@ STATIC_URL = "/static/"
 # Issue в репозитории https://github.com/graphql-python/graphene-django/issues/960
 GRAPHENE = {"SCHEMA": "tablet.schema.schema", "MIDDLEWARE": [], "SCHEMA_OUTPUT": "schema.graphql"}
 
-CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_REGEX_WHITELIST = [r"^(http?://)?localhost:\d+"]
+
 SILKY_INTERCEPT_PERCENT = 0

@@ -39,15 +39,15 @@ type Mutation {
 }
 
 type Paginator {
-  numPages: Int
-  count: Int
-  perPage: Int
+  numPages: Int!
+  count: Int!
+  perPage: Int!
 }
 
 type Product {
-  id: Int
-  name: String
-  category: String
+  id: Int!
+  name: String!
+  category: String!
   workstations: [Workstation!]!
 }
 
@@ -65,16 +65,17 @@ type ProductsMutations {
 }
 
 type ProductsPage {
-  objectList: [Product]
-  paginator: Paginator
-  pageNumber: Int
+  objectList: [Product!]!
+  paginator: Paginator!
+  pageNumber: Int!
 }
 
 type Query {
   tablet: [Tablet]
   workstations: [Workstation]
-  products(page: Int!, perPage: Int!, sorters: [Sorter], filters: [Filter]): ProductsPage
+  products(page: Int!, perPage: Int!, sorters: [Sorter], filters: [Filter]): ProductsPage!
   product(id: Int, name: String, category: String): Product
+  me: User
 }
 
 enum SortOrder {
@@ -122,6 +123,13 @@ input UpdateProductPayload {
   id: Int!
   name: String!
   category: String!
+}
+
+type User {
+  id: Int!
+  username: String!
+  firstName: String!
+  lastName: String!
 }
 
 type Workstation {

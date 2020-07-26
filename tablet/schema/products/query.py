@@ -11,6 +11,7 @@ from tablet.schema.products.types import Product
 class ProductsQuery(object):
     products = graphene.Field(
         ProductsPage,
+        required=True,
         page=graphene.Int(required=True),
         per_page=graphene.Int(required=True),
         sorters=graphene.List(Sorter, required=False),

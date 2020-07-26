@@ -9,9 +9,9 @@ from tablet.models import Product as ProductModel
 
 
 class Product(DjangoObjectType):
-    id = graphene.Int()
-    name = graphene.String()
-    category = graphene.String()
+    id = graphene.Int(required=True)
+    name = graphene.String(required=True)
+    category = graphene.String(required=True)
 
     class Meta:
         model = ProductModel
