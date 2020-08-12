@@ -8,7 +8,6 @@ import pytest
 from graphene.test import Client
 from snapshottest.module import SnapshotTest
 
-from tablet.models import Product
 from tablet.schema import schema
 from tablet.tests.factories import ProductFactory
 
